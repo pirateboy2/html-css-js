@@ -1,0 +1,96 @@
+<!--<!DOCTYPE html>
+<html>
+    <head>
+        <title>conversion</title>
+    </head>
+    <body>
+        <form>
+            Enter a number: <input type="text" id="num">
+            <select name="values" id="values">
+            <option value="meter">meter</option>
+            <option value="kilometer">kilometer</option>
+            <option value="centimeter">centimeter</option>
+             <option value="foot">foot</option></select>
+             to: <input type="text" id="res">
+        </form>
+        <script>
+            function meter ()
+            {
+                var x,y,z;
+                x=document.getElementById("num").value;
+                y = document.getElementById("values").value;
+                z=parseFloat(x) * 30.48;
+                z=document.getElementById("res");
+            }
+            function kilometer ()
+            {
+                var x,y,z;
+                x=document.getElementById("num").value;
+                y = document.getElementById("values").value;
+                z=parseFloat(x) * 30.48;
+                z=document.getElementById("res");
+            }
+            function centimeter ()
+            {
+                var x,y,z;
+                x=document.getElementById("num").value;
+                y = document.getElementById("values").value;
+                z=parseFloat(x) * 30.48;
+                z=document.getElementById("res");
+            }
+            function foot()
+            {
+                var x,y,z;
+                x = document.getElementById("num").value;
+                y = document.getElementById("values").value;
+                z = parseFloat(x) / 3.28084 ;
+                if (y == "meter"){
+                    document.getElementById("res").value = z;}
+                    else{
+                        document.getElementById("num").value;
+                }
+            }
+            document.getElementById("values").onchange = foot;
+        </script>
+    </body>
+</html>!-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversion</title>
+</head>
+<body>
+    <form>
+        Enter a number: <input type="text" id="num" oninput="convert()">
+        <select name="values" id="values" onchange="convert()">
+            <option value="meter">meter</option>
+            <option value="kilometer">kilometer</option>
+            <option value="centimeter">centimeter</option>
+            <option value="foot">foot</option>
+        </select>
+        to: <input type="text" id="res" >
+    </form>
+    <script>
+        function convert() {
+            var x,y,z;
+             x = parseFloat(document.getElementById("num").value);
+             y = document.getElementById("values").value;
+             z = document.getElementById("res");
+
+            if (y === "meter") {
+                z=  x * 0.3048;
+                document.getElementById("res").value = z;
+            } else if (y === "kilometer") {
+               z= x * 0.0003048;
+               document.getElementById("res").value = z;
+            } else if (y === "centimeter") {
+                z=  x * 30.48;
+                document.getElementById("res").value = z;
+            } else if (y === "foot") {
+               z=  x * 3.28084;
+               document.getElementById("res").value = z;
+            }
+        }
+    </script>
+</body>
+</html>

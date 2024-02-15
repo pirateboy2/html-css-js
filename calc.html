@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>      
+    <title>Maths</title>
+</head>
+
+<body>
+    <form>
+        Enter no1 <input type="number" id="no1"> <br> <br>
+        Enter no2 <input type="number" id="no2"> <br> <br>
+        <button type="button" onclick=addition()>Addition</button> <br>
+        <button type="button" onclick=sub()>Substraction</button> <br>
+        <button type="button" onclick=mult()>Multiplication</button> <br>
+        <button type="button" onclick=div()>Division</button> <br> <br>
+        Output <input type="number" id="z">
+    </form>
+    <script>
+        function addition() {
+            var a, b, c;
+            a = parseInt(document.getElementById("no1").value);
+            b = parseInt(document.getElementById("no2").value);
+            c = a + b;
+            document.getElementById("z").value = c;
+        }
+        function sub() {
+            var a, b, c;
+            a = parseInt(document.getElementById("no1").value);
+            b = parseInt(document.getElementById("no2").value);
+            c = a - b;
+            document.getElementById("z").value = c;
+        }
+        function mult() {
+            var a, b, c;
+            a = parseInt(document.getElementById("no1").value);
+            b = parseInt(document.getElementById("no2").value);
+            c = a * b;
+            document.getElementById("z").value = c;
+        }
+        function div() {
+            var a, b, c;
+            a = parseInt(document.getElementById("no1").value);
+            b = parseInt(document.getElementById("no2").value);
+            c = a / b;
+            document.getElementById("z").value = c;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            display three radio buttons as rect,tri,crirc and calc their area
+        </title>
+        <script>
+            function calc()
+            {
+                var r1,r2,r3,a,b,c;
+                 r1=document.getElementById("circ").value;
+                 r2=document.getElementById("rect").value;
+                 r3=document.getElementById("sq").value;
+if(id==r1)
+{
+    a=parseFloat(document.getElementById("x").value);
+    b=parseInt(document.getElementById("y").value);
+    b=3.14*a;
+}
+            }
+        </script>
+    </head>
+</html>
+<body align="center" >
+    <form>
+        <input type="radio"name=circle id="cric">circle
+        <input type="radio"name=rectangle id="rect">rectangle
+        <input type="radio"name=square id="sq">square
+        <fieldset>
+          Enter the value<input type="text" id="x"><br><br>
+          calculate<input type="submit" id="y"><br><br>
+          Area<input type="text" id="z"><br><br>
+        </fieldset>
+    </form>
+</body>

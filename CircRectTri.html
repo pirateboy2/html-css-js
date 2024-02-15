@@ -1,0 +1,92 @@
+<html>
+<style>
+div 
+{
+display:none;
+border:thick double blue;
+padding:20px;
+border-radius:20px;
+width:300px;
+
+}
+</style>
+<body>
+<script>
+function shw(v)
+{
+/*document.getElementsByTagName("div")[0].style="display:none";
+document.getElementsByTagName("div")[1].style="display:none";
+document.getElementsByTagName("div")[2].style="display:none";
+*/
+
+/*document.getElementById("cr").style="display:none";
+document.getElementById("rec").style="display:none";
+document.getElementById("tri").style="display:none";
+*/
+
+for(i=0;i<=2;i++)
+   document.getElementsByTagName("div")[i].style="display:none";
+  
+document.getElementById(v).style="display:block";
+
+}
+
+function calcircle()
+{
+var r,a;
+r=parseFloat(document.getElementById("rad").value);
+a=3.14*r*r;
+document.getElementById("arC").value=a;
+}
+function calRect()
+{
+var l,b,a;
+l=parseFloat(document.getElementById("l").value);
+b=parseFloat(document.getElementById("b").value);
+
+a=l*b;
+document.getElementById("arR").value=a;
+}
+function calTri()
+{
+var h,b,a;
+h=parseFloat(document.getElementById("h").value);
+b=parseFloat(document.getElementById("bt").value);
+
+a=0.5*h*b;
+document.getElementById("arT").value=a;
+}
+
+</script>
+<form>
+<input type=radio name=tp value=Circle onclick=shw("cr")>Circle 
+<input type=radio name=tp value=Rect onclick=shw("rec")>Rectangle 
+<input type=radio name=tp value=Tri onclick=shw("tri")>Triangle 
+
+<div id=cr>
+
+Radius <input type=text id=rad><br>
+<input type=button onclick=calcircle() value="Calculate"><br>
+Area of Circle <input type=text  id=arC>
+</div>
+
+<div id=rec>
+
+Length <input type=text id=l><br>
+Breadth <input type=text id=b><br>
+
+<input type=button onclick=calRect() value="Calculate"><br>
+Area of Rectangle <input type=text  id=arR>
+</div>
+
+<div id=tri>
+
+Height <input type=text id=h><br>
+Width <input type=text id=bt><br>
+
+<input type=button onclick=calTri() value="Calculate"><br>
+Area of Triangle <input type=text  id=arT>
+</div>
+
+</body>
+</html>

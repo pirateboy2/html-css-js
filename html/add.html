@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> CALCULTIONS IN JAVASCRIPT </title>
+<script>
+function addition()
+{
+   var a, b, c ,d,e,f;
+   a= document.getElementById('n1').value ;
+   b= document.getElementById('n2').value ;
+   c= parseInt(a) + parseInt(b) ;
+   d= parseInt(a) - parseInt(b) ;
+   e= parseInt(a) * parseInt(b) ;
+   f= parseInt(b) / parseInt(a) ;
+   
+   document.getElementById("add").value=c
+   document.getElementById("subb").value=d
+   document.getElementById("mul").value=e
+   document.getElementById("div").value=f
+   
+   }
+   </script>
+   </head>
+   <body>
+ <form>
+Number 1 <input type=text id=n1> 
+<br>
+Number 2 <input type=text id=n2>
+<br>
+<p onclick=addition()> ADD </p>
+
+addition <input type= text id= add>
+<br>
+
+<p onclick=subraction()> Sub </p>
+sub <input type= text id= subb> 
+<br>
+<p onclick=multiplication()> Multiply </p>
+multiplication<input type= text id= mul>
+<br>
+<p onclick=divison()> Div </p>
+divide <input type= text id= div>
+
+
+</form>
+</body>
+</html>
